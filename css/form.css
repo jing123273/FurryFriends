@@ -1,0 +1,75 @@
+body{
+    background-color: #efe8d9;
+    font-family: 'arial','Hiragino Sans','Meiryo','sans-serif';
+}
+header h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 30px 0;
+}
+#formArea h3{
+    font-weight: lighter;
+}
+.age-job-residence{
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+    font-weight: lighter;
+    gap: 15px;  /* 兩個元素之間的間距 */
+    white-space: nowrap;/* 字不換行*/
+}
+form {
+    width: 600px;
+    margin: 0 auto;
+}
+
+input[type="text"],input[type="email"],input[type="tel"],select,textarea {
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  width: 100%;
+  margin-top: 5px;
+  padding: 4px 8px;
+  font-size: 17px;
+}
+input[type="submit"] {
+    background-color: #121212;
+    color: #ffffff;
+    padding: 18px 50px;
+    margin-left: 240px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    
+    transition-property: background-color;
+    transition-duration: 300ms;
+    transition-delay: 0ms;
+    transform: scale(1.05);
+}
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    vertical-align: baseline;
+    margin-right: 4px;
+}
+.experience {
+    margin-right: 24px;
+}
+textarea {
+    height: 100px;
+    margin-bottom: 22px;
+}
+
+.gMenu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+  }
+
+footer{
+    background-color: darkgoldenrod;
+    font-size: 13px;
+    text-align: center;
+}

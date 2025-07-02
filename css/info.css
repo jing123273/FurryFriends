@@ -1,0 +1,161 @@
+body{                                                          /*全區樣式*/
+    background-color: rgb(247, 243, 239);
+    font-family: 'arial','Hiragino Sans','Meiryo','sans-serif';
+    font-size: 20px;
+  }
+header h1 {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 50px;
+    padding-top: 40px;
+    padding-bottom: 25px;
+}
+header h1 span {
+    background-image:radial-gradient(circle, rgba(65,64,41,1) 0%, rgba(37,73,116,1) 100%);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+section h2 {
+    text-align: center;
+    font-size: 20px;
+}
+.small-text {
+    text-align: center;
+    font-size: 13px;
+}
+section h3{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 90px;
+}
+.map iframe {
+    width: 100%;
+    height: 240px;
+    margin-bottom: 8px;
+}
+.map {
+    font-size: 12px;
+    margin-bottom: 60px;
+}
+.contact{
+  display: flex;
+    margin-top: 85px;
+    justify-content: center;/*圖水平置中*/
+    gap: 30px;/*圖間距*/
+}
+.contact img{
+  width: 30px;
+  height: auto;
+}
+.contact img:hover {
+  transform: scale(1.2); /* 游標移入時放大 */
+  opacity: 0.8;
+}
+footer{
+    background-color: #f5f5f5;
+    text-align: center;
+}
+footer p img{
+    width: 80px;
+   
+}
+
+.gMenu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+  }
+  /* 選單圖示固定在畫面右上方 */
+  .gMenu .menu-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    padding-top: 5px;
+    height: 12px;
+  }
+  /* 這是選單圖示（三條線）正中央的線條 */
+  .gMenu .menu-icon .navicon {
+    background: #ffc107; /* 可以任意改變顏色 */
+    display: block;
+    height: 2px; /* 粗細 */
+    width: 31px; /* 長度 */
+    position: relative;
+    transition: background .4s ease-out; /* 改變形狀時的動畫 */
+  }
+  /* 以虛擬元素增加選單圖示（三條線）上下的線條 */
+  .gMenu .menu-icon .navicon::before,
+  .gMenu .menu-icon .navicon::after {
+    background: #ffc107; /* 可以任意改變顏色 */
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .4s ease-out; /* 改變形狀時的動畫 */
+    width: 100%;
+  }
+  .gMenu .menu-icon .navicon::before {top: 10px;} /* 位置往上移動 */
+  .gMenu .menu-icon .navicon::after {top: -10px;} /* 位置往下移動 */
+  
+  /* 這是顯示的選單 */
+  .gMenu .menu {
+    background-color: rgba(255,255,255,0.9);
+    overflow: hidden;
+    max-height: 0; /* ★一開始高度為0，呈現隱藏狀態 */
+    transition: max-height .6s; /* 顯示時的動畫 */
+    text-align: center;
+  }
+  /* 這是選單的設計 */
+  .gMenu .menu li:first-of-type {
+    padding-top: 50px;
+     
+  }
+  .gMenu .menu li {
+    list-style-type: none; /* 去除預設的點點 */
+}
+  .gMenu .menu li a {
+    display: block;
+    padding: 24px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .gMenu .menu li a:hover {
+    background-color: #f4f4f4;
+  }
+  /* 隨時隱藏核取方塊 */
+  .gMenu .menu-btn {
+    display: none;
+  }
+  /* ▼▼▼以下是核取方塊為ON時的狀態▼▼▼ */
+  .gMenu .menu-btn:checked ~ .menu {
+    max-height: 338px; /* ★核取方塊為ON時，高度顯示為338px */
+    transition: max-height .6s;
+  }
+  /* 隱藏選單按鈕的中間線條 */
+  .gMenu .menu-btn:checked ~ .menu-icon .navicon {background: transparent;}
+  
+  /* 選單按鈕的上下線條傾斜45度，製作出✕符號 */
+  .gMenu .menu-btn:checked ~ .menu-icon .navicon::before {transform: rotate(-45deg);top: 0;}
+  .gMenu .menu-btn:checked ~ .menu-icon .navicon::after {transform: rotate(45deg);top: 0;}
+  .gMenu .menu-icon{
+    top: 26px;
+  }
+  .gMenu .menu-icon .navicon,
+  .gMenu .menu-icon .navicon::before,
+  .gMenu .menu-icon .navicon::after{
+    background: #333333;
+  }
+  .gMenu .menu-icon:hover {
+    transform: scale(1.1); /* 當滑鼠移入時，圖示稍微放大 */
+}
+.gMenu .menu-icon .navicon:hover {      
+  background: #b8b99a; 
+}
+.gMenu .menu-icon:hover .navicon::before,
+.gMenu .menu-icon:hover .navicon::after {
+    background: #b8b99a; 
+}

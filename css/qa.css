@@ -1,0 +1,63 @@
+body{
+    background-color: beige;
+    font-family: 'arial','Hiragino Sans','Meiryo','sans-serif';
+    font-size: 20px;
+}
+hr {
+    border: none; /* 移除預設邊框 */
+    height: 3px; /* 設定線條高度 */
+    background-color: #eacb9d; /* 設定線條顏色 */
+    width: 50%; /* 設定線條長度 */
+    margin: 10px auto; /* 置中 */
+}
+header h1{
+    text-align: center;
+}
+.wrapper {
+    display: flex;
+    justify-content: center; /* 讓內容水平置中 */
+}
+.container {
+    width: 60%;
+}
+div  .qq1{
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+div .qq2{
+    padding-bottom: 30px;
+
+}
+div .qq3{
+    padding-bottom: 30px;
+
+}
+div .qq4{
+    padding-bottom: 30px;
+
+}
+div .qq5{
+    padding-bottom: 30px;
+
+}
+div .qq6{
+    padding-bottom: 30px;
+
+}
+div .qq7{
+    padding-bottom: 30px;
+
+}
+div .qq8{
+    padding-bottom: 30px;
+
+}
+div .qq9{
+    padding-bottom: 30px;
+}
+footer{
+    background-color: darkgoldenrod;
+    font-size: 13px;
+    text-align: center;
+}
+
