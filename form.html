@@ -11,66 +11,73 @@
         <h2>領養申請表單</h2>
     </header>
     <section id="formArea">
-        <form action=""method="">
-        <p><h3>姓名</h3><input type="text" name="user_nane"></p>
-        <p><h3>電子郵件</h3><input type="email" name="user_mail"></p>
-        <p><h3>聯絡電話</h3><input type="tel" name="user_phone"></p>
-        <p class="age-job-residence">
-          <span>年齡</span>
-          <input type="number" name="user_age" id="ageInput" min="1" max="100" value="" step="1">  
-          <span>職業</span>
-          <input type="text" name="user_job">
-          <span>住宅類別</span>
-          <input type="text" name="user_residence">
-      </p>
-        <p>
-          <h3>喜歡的F&F</h3>
-          <select name="select_animal" id="animalSelect">
-          <option value="小黃">小黃</option>
-          <option value="小吉"> 小吉</option>
-          <option value="小黑"> 小黑</option>
-          <option value="布布">布布</option>
-          <option value="乖乖"> 乖乖</option>
-          <option value="咖啡">咖啡</option>
-          <option value="琪琪"> 琪琪</option>
-          <option value="黃黃">黃黃</option>
-          <option value="點點"> 點點</option>
-          <option value="獅子">獅子</option>
-          <option value="獅子">牛奶</option>
-          <option value="獅子">白白</option>
-          <option value="獅子">拉拉</option>
-          <option value="獅子">逗逗</option>
-          <option value="獅子">斑斑</option>
-          <option value="獅子">雖雖</option>
-          <option value="獅子">樂樂</option>
-          <option value="獅子">嚕嚕</option>
-        </p>
-        </select>
-        <script>
-          let select = document.getElementById("animalSelect");
-      
-          select.addEventListener("mousedown", function () {
-              this.size = 5;  // 滑鼠點下時顯示 5 個選項
-          });
-      
-          select.addEventListener("change", function () {
-              this.size = 1;  // 選擇後自動收回
-          });          
-      </script>
-     
-        <p>
-          <h3>養寵經驗</h3>
-          <label class="experience"> 
-          <input type="checkbox" name="experience" value="有" class="checkbox-size">有
-        </label>
-          <label class="experience">
-          <input type="checkbox" name="experience" value="無" class="checkbox-size">無
-        </label>
-        </p>
-        <p><h3>領養原因</h3>
-            <textarea name="message"></textarea></p>
-        <p><input type="submit" value="Send"></p>
-        </form>
+        <form action="https://formsubmit.co/meg.yyy.ooo@gmail.com" method="POST">
+  <p><h3>姓名</h3><input type="text" name="user_name" required></p>
+
+  <p><h3>電子郵件</h3><input type="email" name="user_mail" required></p>
+
+  <p><h3>聯絡電話</h3><input type="tel" name="user_phone"></p>
+
+  <p class="age-job-residence">
+    <span>年齡</span>
+    <input type="number" name="user_age" id="ageInput" min="1" max="100" step="1">  
+    <span>職業</span>
+    <input type="text" name="user_job">
+    <span>住宅類別</span>
+    <input type="text" name="user_residence">
+  </p>
+
+  <p>
+    <h3>喜歡的F&F</h3>
+    <select name="select_animal" id="animalSelect">
+      <option value="小黃">小黃</option>
+      <option value="小吉">小吉</option>
+      <option value="小黑">小黑</option>
+      <option value="布布">布布</option>
+      <option value="乖乖">乖乖</option>
+      <option value="咖啡">咖啡</option>
+      <option value="琪琪">琪琪</option>
+      <option value="黃黃">黃黃</option>
+      <option value="點點">點點</option>
+      <option value="獅子">獅子</option>
+      <option value="牛奶">牛奶</option>
+      <option value="白白">白白</option>
+      <option value="拉拉">拉拉</option>
+      <option value="逗逗">逗逗</option>
+      <option value="斑斑">斑斑</option>
+      <option value="雖雖">雖雖</option>
+      <option value="樂樂">樂樂</option>
+      <option value="嚕嚕">嚕嚕</option>
+    </select>
+  </p>
+
+  <script>
+    let select = document.getElementById("animalSelect");
+    select.addEventListener("mousedown", function () {
+      this.size = 5;
+    });
+    select.addEventListener("change", function () {
+      this.size = 1;
+    });          
+  </script>
+
+  <p>
+    <h3>養寵經驗</h3>
+    <label class="experience"> 
+      <input type="checkbox" name="experience" value="有" class="checkbox-size">有
+    </label>
+    <label class="experience">
+      <input type="checkbox" name="experience" value="無" class="checkbox-size">無
+    </label>
+  </p>
+
+  <p><h3>領養原因</h3>
+    <textarea name="message"></textarea>
+  </p>
+
+  <p><input type="submit" value="Send"></p>
+</form>
+
       </section>
     </main>
     <footer>
