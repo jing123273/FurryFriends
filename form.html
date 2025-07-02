@@ -10,75 +10,96 @@
     <header>
         <h2>領養申請表單</h2>
     </header>
-    <section id="formArea">
-        <form action="https://formsubmit.co/meg.yyy.ooo@gmail.com" method="POST">
-  <p><h3>姓名</h3><input type="text" name="user_name" required></p>
+ <section id="formArea">
+  <form id="adoptForm" novalidate>
+    <p><h3>姓名</h3><input type="text" name="user_name" required></p>
+    <p><h3>電子郵件</h3><input type="email" name="user_mail" required></p>
+    <p><h3>聯絡電話</h3><input type="tel" name="user_phone"></p>
+    <p class="age-job-residence">
+      <span>年齡</span>
+      <input type="number" name="user_age" id="ageInput" min="1" max="100" step="1">  
+      <span>職業</span>
+      <input type="text" name="user_job">
+      <span>住宅類別</span>
+      <input type="text" name="user_residence">
+    </p>
+    <p>
+      <h3>喜歡的F&F</h3>
+      <select name="select_animal" id="animalSelect">
+        <option value="小黃">小黃</option>
+        <option value="小吉">小吉</option>
+        <option value="小黑">小黑</option>
+        <option value="布布">布布</option>
+        <option value="乖乖">乖乖</option>
+        <option value="咖啡">咖啡</option>
+        <option value="琪琪">琪琪</option>
+        <option value="黃黃">黃黃</option>
+        <option value="點點">點點</option>
+        <option value="獅子">獅子</option>
+        <option value="牛奶">牛奶</option>
+        <option value="白白">白白</option>
+        <option value="拉拉">拉拉</option>
+        <option value="逗逗">逗逗</option>
+        <option value="斑斑">斑斑</option>
+        <option value="雖雖">雖雖</option>
+        <option value="樂樂">樂樂</option>
+        <option value="嚕嚕">嚕嚕</option>
+      </select>
+    </p>
 
-  <p><h3>電子郵件</h3><input type="email" name="user_mail" required></p>
+    <script>
+      let select = document.getElementById("animalSelect");
+      select.addEventListener("mousedown", function () {
+        this.size = 5;
+      });
+      select.addEventListener("change", function () {
+        this.size = 1;
+      });          
+    </script>
 
-  <p><h3>聯絡電話</h3><input type="tel" name="user_phone"></p>
+    <p>
+      <h3>養寵經驗</h3>
+      <label class="experience"> 
+        <input type="checkbox" name="experience" value="有" class="checkbox-size">有
+      </label>
+      <label class="experience">
+        <input type="checkbox" name="experience" value="無" class="checkbox-size">無
+      </label>
+    </p>
 
-  <p class="age-job-residence">
-    <span>年齡</span>
-    <input type="number" name="user_age" id="ageInput" min="1" max="100" step="1">  
-    <span>職業</span>
-    <input type="text" name="user_job">
-    <span>住宅類別</span>
-    <input type="text" name="user_residence">
-  </p>
+    <p><h3>領養原因</h3>
+      <textarea name="message"></textarea>
+    </p>
 
-  <p>
-    <h3>喜歡的F&F</h3>
-    <select name="select_animal" id="animalSelect">
-      <option value="小黃">小黃</option>
-      <option value="小吉">小吉</option>
-      <option value="小黑">小黑</option>
-      <option value="布布">布布</option>
-      <option value="乖乖">乖乖</option>
-      <option value="咖啡">咖啡</option>
-      <option value="琪琪">琪琪</option>
-      <option value="黃黃">黃黃</option>
-      <option value="點點">點點</option>
-      <option value="獅子">獅子</option>
-      <option value="牛奶">牛奶</option>
-      <option value="白白">白白</option>
-      <option value="拉拉">拉拉</option>
-      <option value="逗逗">逗逗</option>
-      <option value="斑斑">斑斑</option>
-      <option value="雖雖">雖雖</option>
-      <option value="樂樂">樂樂</option>
-      <option value="嚕嚕">嚕嚕</option>
-    </select>
-  </p>
+    <p><input type="submit" value="送出申請"></p>
+  </form>
 
+  <!-- 載入 EmailJS SDK -->
+  <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
   <script>
-    let select = document.getElementById("animalSelect");
-    select.addEventListener("mousedown", function () {
-      this.size = 5;
+    (function(){
+      emailjs.init("你的UserID");  // 你的 EmailJS User ID，必須正確
+    })();
+
+    const form = document.getElementById('adoptForm');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm('service_pv6tees', 'template_b72242g', this)
+        .then(() => {
+          alert('送出成功！我們會盡快與您聯繫。');
+          form.reset();
+          window.location.href = "https://jing123273.github.io/FurryFriends/"; // 送出後跳轉
+        }, (error) => {
+          alert('寄信失敗，請稍後再試。');
+          console.error('EmailJS Error:', error);
+        });
     });
-    select.addEventListener("change", function () {
-      this.size = 1;
-    });          
   </script>
+</section>
 
-  <p>
-    <h3>養寵經驗</h3>
-    <label class="experience"> 
-      <input type="checkbox" name="experience" value="有" class="checkbox-size">有
-    </label>
-    <label class="experience">
-      <input type="checkbox" name="experience" value="無" class="checkbox-size">無
-    </label>
-  </p>
 
-  <p><h3>領養原因</h3>
-    <textarea name="message"></textarea>
-  </p>
-
-  <p><input type="submit" value="Send"></p>
-</form>
-
-      </section>
     </main>
     <footer>
       <p><small>©2025 by Furry Friends</small></p>
