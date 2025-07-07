@@ -23,6 +23,7 @@
                   </ul>
                 </nav>
         </header>
+        <!--(原本用HTML寫的版本)
         <div class="animal-container">
             <div class="animal">
                 <img src="image\小黃.png" alt="小黃">
@@ -145,6 +146,10 @@
                 </ul>
             </div>
         </div>
+    -->
+        <!-- 因應實習作業需求改JSON格式匯入 -->
+        <div id="animal-list" class="animal-container"></div>
+
         <div class="page-img">       
             <a href="introduce.html"><img src="image\上一頁.png" alt="上一頁" class="arrow"></a>  
             <a href="introduce2.html"><img src="image\下一頁.png" alt="下一頁" class="arrow"></a>
@@ -163,6 +168,40 @@
         <footer>
             <p><small>©2025 by Furry Friends </small></p>
         </footer>
+        <footer>
+    <p><small>©2025 by Furry Friends </small></p>
+</footer>
+
+        <!-- JS 程式碼 -->
+        <script>
+        fetch('animals.json')
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById('animal-list');
+            data.forEach(animal => {
+            const div = document.createElement('div');
+            div.className = 'animal';
+            div.innerHTML = `
+                <img src="${animal.image}" alt="${animal.name}">
+                <ul>
+                <li>名字: ${animal.name}</li>
+                <li>性別: ${animal.gender}</li>
+                <li>年齡: ${animal.age}</li>
+                <li>品種: ${animal.breed}</li>
+                <li>性格: ${animal.personality}</li>
+                <li>體重: ${animal.weight}</li>
+                <li>結紮: ${animal.neutered}</li>
+                </ul>
+            `;
+            container.appendChild(div);
+            });
+        })
+        .catch(error => {
+            console.error("載入 JSON 發生錯誤:", error);
+        });
+        </script>
+       
+
           
     </body>
     </html>

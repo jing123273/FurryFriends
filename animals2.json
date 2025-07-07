@@ -1,0 +1,82 @@
+[
+  {
+    "image": "image/牛奶.png",
+    "name": "牛奶",
+    "gender": "男",
+    "age": "8歲",
+    "breed": "巴仙吉犬",
+    "personality": "鬱悶、怕生",
+    "weight": "30kg",
+    "neutered": "是"
+  },
+  {
+    "image": "image/白白.png",
+    "name": "白白",
+    "gender": "女",
+    "age": "10歲",
+    "breed": "巴仙吉犬",
+    "personality": "溫馴",
+    "weight": "36kg",
+    "neutered": "是"
+  },
+  {
+    "image": "image/拉拉.png",
+    "name": "拉拉",
+    "gender": "男",
+    "age": "4歲",
+    "breed": "拉布拉多",
+    "personality": "活潑、溫馴",
+    "weight": "6kg",
+    "neutered": "否"
+  },
+  {
+    "image": "image/逗逗.png",
+    "name": "逗逗",
+    "gender": "男",
+    "age": "7歲",
+    "breed": "大麥町",
+    "personality": "怕生",
+    "weight": "22kg",
+    "neutered": "是"
+  },
+  {
+    "image": "image/斑斑.png",
+    "name": "斑斑",
+    "gender": "女",
+    "age": "4歲",
+    "breed": "奇努克犬",
+    "personality": "乖巧、溫馴",
+    "weight": "5.8kg",
+    "neutered": "否"
+  },
+  {
+    "image": "image/雖雖.png",
+    "name": "雖雖",
+    "gender": "女",
+    "age": "13歲",
+    "breed": "奇努克犬",
+    "personality": "安靜",
+    "weight": "30kg",
+    "neutered": "是"
+  },
+  {
+    "image": "image/樂樂.png",
+    "name": "樂樂",
+    "gender": "女",
+    "age": "5歲",
+    "breed": "柴犬",
+    "personality": "乖巧、黏人、活潑",
+    "weight": "11kg",
+    "neutered": "是"
+  },
+  {
+    "image": "image/嚕嚕.png",
+    "name": "嚕嚕",
+    "gender": "女",
+    "age": "10歲",
+    "breed": "惠彼特犬",
+    "personality": "乖巧、黏人",
+    "weight": "32kg",
+    "neutered": "是"
+  }
+]

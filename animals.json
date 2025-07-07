@@ -1,0 +1,102 @@
+[
+  {
+    "name": "小黃",
+    "gender": "男",
+    "age": "7歲",
+    "breed": "土狗",
+    "personality": "膽小、怕生",
+    "weight": "33kg",
+    "neutered": "是",
+    "image": "image/小黃.png"
+  },
+  {
+    "name": "小吉",
+    "gender": "女",
+    "age": "4歲",
+    "breed": "吉娃娃",
+    "personality": "害羞、怕生",
+    "weight": "24kg",
+    "neutered": "否",
+    "image": "image/小吉.png"
+  },
+  {
+    "name": "小黑",
+    "gender": "男",
+    "age": "10歲",
+    "breed": "愛斯基摩犬",
+    "personality": "乖巧、溫馴",
+    "weight": "36kg",
+    "neutered": "是",
+    "image": "image/小黑.png"
+  },
+  {
+    "name": "布布",
+    "gender": "男",
+    "age": "1歲",
+    "breed": "牧羊犬",
+    "personality": "乖巧",
+    "weight": "1kg",
+    "neutered": "否",
+    "image": "image/布布.png"
+  },
+  {
+    "name": "乖乖",
+    "gender": "女",
+    "age": "2歲",
+    "breed": "田園犬",
+    "personality": "乖巧、溫馴",
+    "weight": "3kg",
+    "neutered": "否",
+    "image": "image/乖乖.png"
+  },
+  {
+    "name": "咖啡",
+    "gender": "男",
+    "age": "11歲",
+    "breed": "德牧",
+    "personality": "安靜、溫馴",
+    "weight": "34kg",
+    "neutered": "是",
+    "image": "image/咖啡.jpg"
+  },
+  {
+    "name": "琪琪",
+    "gender": "女",
+    "age": "2歲",
+    "breed": "鬆獅犬",
+    "personality": "乖巧、黏人",
+    "weight": "2.5kg",
+    "neutered": "是",
+    "image": "image/琪琪.png"
+  },
+  {
+    "name": "黃黃",
+    "gender": "女",
+    "age": "4歲",
+    "breed": "奇努克犬",
+    "personality": "乖巧、黏人",
+    "weight": "3.5kg",
+    "neutered": "是",
+    "image": "image/黃黃.png"
+  },
+  {
+    "name": "點點",
+    "gender": "女",
+    "age": "5歲",
+    "breed": "傑克羅素",
+    "personality": "乖巧、害羞",
+    "weight": "4.5kg",
+    "neutered": "是",
+    "image": "image/點點.png"
+  },
+  {
+    "name": "獅子",
+    "gender": "女",
+    "age": "4歲",
+    "breed": "博美",
+    "personality": "活潑、黏人",
+    "weight": "5.5kg",
+    "neutered": "是",
+    "image": "image/獅子.png"
+  }
+]
