@@ -184,3 +184,18 @@ footer{
 .gMenu .menu-icon:hover .navicon::after {
     background: #b8b99a; 
 }
+.adopt-button {
+  margin-top: 10px;
+  text-align: center;
+}
+.adopt-button input[type="submit"] {
+  padding: 8px 12px;
+  background-color: #f4b400;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.adopt-button input[type="submit"]:hover {
+  background-color: #e59500;
+}
