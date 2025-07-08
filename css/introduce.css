@@ -184,25 +184,4 @@ footer{
 .gMenu .menu-icon:hover .navicon::after {
     background: #b8b99a; 
 }
-.adopt-button {
-  margin-top: 10px;
-  text-align: center;
-}
-
-.adopt-button button {
-  padding: 6px 14px;
-  font-size: 14px;
-  background-color: white;
-  color: black;
-  border: 2px solid black;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-/* 滑過去變黑底白字 */
-.adopt-button button:hover {
-  background-color: black;
-  color: white;
-}
 
