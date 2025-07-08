@@ -23,6 +23,26 @@
                   </ul>
                 </nav>
         </header>
+        <style>
+.adopt-button {
+  margin-top: 10px;
+  text-align: center;
+}
+.adopt-button button {
+  padding: 6px 14px;
+  font-size: 14px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.adopt-button button:hover {
+  background-color: black;
+  color: white;
+}
+</style>
         <!--(原本用HTML寫的版本)
         <div class="animal-container">
             <div class="animal">
@@ -131,44 +151,46 @@
             <a href="introduce2.html"><img src="image\下一頁.png" alt="下一頁" class="arrow"></a>
         </div>
 
-        <div class="adopt">     
-            <p>
-                <a href="form.html" target="_blank">
-                <input type="submit" value="我想領養" >
-                </a>
-              </p>  
-        </div>
         <div class="page"><p>2</p></div>
           
         <footer>
             <p><small>©2025 by Furry Friends </small></p>
         </footer>
 
-        <script>// 載入第二頁的 JSON 檔
-            fetch('animals2.json')  
-            .then(res => res.json())
-            .then(data => {
-                const container = document.getElementById('animal-list');
-                data.forEach(animal => {
-                const div = document.createElement('div');
-                div.className = 'animal';
-                div.innerHTML = `
-                    <img src="${animal.image}" alt="${animal.name}">
-                    <ul>
-                    <li>名字: ${animal.name}</li>
-                    <li>性別: ${animal.gender}</li>
-                    <li>年齡: ${animal.age}</li>
-                    <li>品種: ${animal.breed}</li>
-                    <li>性格: ${animal.personality}</li>
-                    <li>體重: ${animal.weight}</li>
-                    <li>結紮: ${animal.neutered}</li>
-                    </ul>
-                `;
-                container.appendChild(div);
-                });
-            })
-            .catch(err => console.error('載入 JSON 錯誤:', err));
-            </script>
+     <script>// 載入第二頁的 JSON 檔
+                
+    fetch('animals.json')
+    .then(response => response.json())
+    .then(data => {
+        const container = document.getElementById('animal-list');
+        data.forEach(animal => {
+        const div = document.createElement('div');
+        div.className = 'animal';
+        div.innerHTML = `
+            <img src="${animal.image}" alt="${animal.name}">
+            <ul>
+            <li>名字: ${animal.name}</li>
+            <li>性別: ${animal.gender}</li>
+            <li>年齡: ${animal.age}</li>
+            <li>品種: ${animal.breed}</li>
+            <li>性格: ${animal.personality}</li>
+            <li>體重: ${animal.weight}</li>
+            <li>結紮: ${animal.neutered}</li>
+            </ul>
+            <div class="adopt-button">
+            <button onclick="window.open('form.html?animal=${encodeURIComponent(animal.name)}', '_blank')">
+                我想領養
+            </button>
+            </div>
+        `;
+        container.appendChild(div);
+        });
+    })
+    .catch(error => {
+        console.error("載入 JSON 發生錯誤:", error);
+    });
+    </script>
+
 
           
     </body>
