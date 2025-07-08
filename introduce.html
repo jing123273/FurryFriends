@@ -171,7 +171,7 @@
     
 
         <!-- JS 程式碼 -->
-    <script>
+        <script>
 fetch('animals.json')
   .then(response => response.json())
   .then(data => {
@@ -191,9 +191,9 @@ fetch('animals.json')
           <li>結紮: ${animal.neutered}</li>
         </ul>
         <div class="adopt-button">
-          <a href="form.html?animal=${encodeURIComponent(animal.name)}" target="_blank">
-            <input type="submit" value="我想領養">
-          </a>
+          <button onclick="window.open('form.html?animal=${encodeURIComponent(animal.name)}', '_blank')">
+            我想領養
+          </button>
         </div>
       `;
       container.appendChild(div);
