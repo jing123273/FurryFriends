@@ -30,30 +30,22 @@
           <span>住宅類別</span>
           <input type="text" name="user_residence">
         </p>
-
         <p>
-          <h3>喜歡的F&F</h3>
-          <select name="select_animal" id="animalSelect">
-            <option value="小黃">小黃</option>
-            <option value="小吉">小吉</option>
-            <option value="小黑">小黑</option>
-            <option value="布布">布布</option>
-            <option value="乖乖">乖乖</option>
-            <option value="咖啡">咖啡</option>
-            <option value="琪琪">琪琪</option>
-            <option value="黃黃">黃黃</option>
-            <option value="點點">點點</option>
-            <option value="獅子">獅子</option>
-            <option value="牛奶">牛奶</option>
-            <option value="白白">白白</option>
-            <option value="拉拉">拉拉</option>
-            <option value="逗逗">逗逗</option>
-            <option value="斑斑">斑斑</option>
-            <option value="雖雖">雖雖</option>
-            <option value="樂樂">樂樂</option>
-            <option value="嚕嚕">嚕嚕</option>
-          </select>
-        </p>
+  <h3>申請領養的動物</h3>
+  <input type="text" id="selectedAnimal" disabled style="background-color: #eee; border: 1px solid #ccc; padding: 6px;">
+  <input type="hidden" name="selected_animal" id="selectedAnimalHidden">
+</p>
+
+<script>
+  // 取得網址參數 animal=xxx
+  const params = new URLSearchParams(window.location.search);
+  const animalName = params.get("animal");
+
+  if (animalName) {
+    document.getElementById("selectedAnimal").value = animalName;             // 顯示用
+    document.getElementById("selectedAnimalHidden").value = animalName;       // 提交用
+  }
+</script>
 
         <script>
           let select = document.getElementById("animalSelect");
