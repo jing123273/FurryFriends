@@ -185,38 +185,38 @@
 
         <!-- JS 程式碼 -->
         <script>
-fetch('animals.json')
-  .then(response => response.json())
-  .then(data => {
-    const container = document.getElementById('animal-list');
-    data.forEach(animal => {
-      const div = document.createElement('div');
-      div.className = 'animal';
-      div.innerHTML = `
-        <img src="${animal.image}" alt="${animal.name}">
-        <ul>
-          <li>名字: ${animal.name}</li>
-          <li>性別: ${animal.gender}</li>
-          <li>年齡: ${animal.age}</li>
-          <li>品種: ${animal.breed}</li>
-          <li>性格: ${animal.personality}</li>
-          <li>體重: ${animal.weight}</li>
-          <li>結紮: ${animal.neutered}</li>
-        </ul>
-        <div class="adopt-button">
-          <button onclick="window.open('form.html?animal=${encodeURIComponent(animal.name)}', '_blank')">
-            我想領養
-          </button>
-        </div>
-      `;
-      container.appendChild(div);
+          fetch('animals.json')
+          .then(response => response.json())
+          .then(data => {
+          const container = document.getElementById('animal-list');
+          data.forEach(animal => {
+          const div = document.createElement('div');
+          div.className = 'animal';
+          div.innerHTML = `
+          <img src="${animal.image}" alt="${animal.name}">
+          <ul>
+            <li>名字: ${animal.name}</li>
+            <li>性別: ${animal.gender}</li>
+            <li>年齡: ${animal.age}</li>
+            <li>品種: ${animal.breed}</li>
+            <li>性格: ${animal.personality}</li>
+            <li>體重: ${animal.weight}</li>
+            <li>結紮: ${animal.neutered}</li>
+          </ul>
+          <div class="adopt-button">
+            <button onclick="window.open('form.html?animal=${encodeURIComponent(animal.name)}', '_blank')">
+              我想領養
+            </button>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    })
+    .catch(error => {
+      console.error("載入 JSON 發生錯誤:", error);
     });
-  })
-  .catch(error => {
-    console.error("載入 JSON 發生錯誤:", error);
-  });
-</script>
+  </script>
 
-          
+         
     </body>
-    </html>
+</html>
