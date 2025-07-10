@@ -1,5 +1,5 @@
 @charset "utf-8";
-body{                                                          /*全區樣式*/
+body{                                                          
     background-color: rgb(247, 243, 239);
     font-family: 'arial','Hiragino Sans','Meiryo','sans-serif';
     font-size: 20px;
@@ -58,19 +58,19 @@ header h1{
     padding-top: 5px;
     height: 12px;
   }
-  /* 這是選單圖示（三條線）正中央的線條 */
+  /* 選單圖示（三條線）正中央的線條 */
   .gMenu .menu-icon .navicon {
-    background: #ffc107; /* 可以任意改變顏色 */
+    background: #ffc107; 
     display: block;
     height: 2px; /* 粗細 */
     width: 31px; /* 長度 */
     position: relative;
-    transition: background .4s ease-out; /* 改變形狀時的動畫 */
+    transition: background .4s ease-out; 
   }
   /* 以虛擬元素增加選單圖示（三條線）上下的線條 */
   .gMenu .menu-icon .navicon::before,
   .gMenu .menu-icon .navicon::after {
-    background: #ffc107; /* 可以任意改變顏色 */
+    background: #ffc107; 
     content: '';
     display: block;
     height: 100%;
@@ -85,11 +85,11 @@ header h1{
   .gMenu .menu {
     background-color: rgba(255,255,255,0.9);
     overflow: hidden;
-    max-height: 0; /* ★一開始高度為0，呈現隱藏狀態 */
+    max-height: 0; /* 開始高度為0(呈隱藏狀態) */
     transition: max-height .6s; /* 顯示時的動畫 */
     text-align: center;
   }
-  /* 這是選單的設計 */
+  /* 選單的設計 */
   .gMenu .menu li:first-of-type {
     padding-top: 50px;
      
@@ -110,7 +110,7 @@ header h1{
   .gMenu .menu-btn {
     display: none;
   }
-  /* ▼▼▼以下是核取方塊為ON時的狀態▼▼▼ */
+  /* 核取方塊為ON時的狀態 */
   .gMenu .menu-btn:checked ~ .menu {
     max-height: 338px; /* ★核取方塊為ON時，高度顯示為338px */
     transition: max-height .6s;

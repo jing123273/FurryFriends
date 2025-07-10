@@ -17,8 +17,8 @@ body{                                                          /*全區樣式*/
   .animal-container {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center; /* 讓內容置中 */
-      gap: 20px; /* 控制間距 */
+      justify-content: center; /* 內容置中 */
+      gap: 20px; /* 間距 */
   }
   
   .animal {
@@ -44,7 +44,7 @@ body{                                                          /*全區樣式*/
   }
   
 .page-img {
-    display: flex; /* 使用 Flexbox */ 
+    display: flex; 
     width: 87px;
     margin: auto;
   }
@@ -53,7 +53,7 @@ body{                                                          /*全區樣式*/
     width: 27px;
     margin-top: 30px;
     padding-right: 33px;
-    transition: transform 0.2s ease-in-out; /* 讓動畫更順滑 */
+    transition: transform 0.2s ease-in-out; /* 動畫效果 */
 }
 .arrow:hover {
     transform: scale(1.8); /* 滑鼠懸停 */
@@ -102,9 +102,9 @@ body{                                                          /*全區樣式*/
       padding-top: 5px;
       height: 12px;
     }
-    /* 這是選單圖示（三條線）正中央的線條 */
+    /* 選單圖示（三條線）中間那條線 */
     .gMenu .menu-icon .navicon {
-      background: #ffc107; /* 可以任意改變顏色 */
+      background: #ffc107; 
       display: block;
       height: 2px; /* 粗細 */
       width: 31px; /* 長度 */
@@ -114,7 +114,7 @@ body{                                                          /*全區樣式*/
     /* 以虛擬元素增加選單圖示（三條線）上下的線條 */
     .gMenu .menu-icon .navicon::before,
     .gMenu .menu-icon .navicon::after {
-      background: #ffc107; /* 可以任意改變顏色 */
+      background: #ffc107; 
       content: '';
       display: block;
       height: 100%;
@@ -125,15 +125,15 @@ body{                                                          /*全區樣式*/
     .gMenu .menu-icon .navicon::before {top: 10px;} /* 位置往上移動 */
     .gMenu .menu-icon .navicon::after {top: -10px;} /* 位置往下移動 */
     
-    /* 這是顯示的選單 */
+    /* 顯示的選單 */
     .gMenu .menu {
       background-color: rgba(255,255,255,0.9);
       overflow: hidden;
-      max-height: 0; /* ★一開始高度為0，呈現隱藏狀態 */
+      max-height: 0; /* 一開始高度為0(隱藏狀態) */
       transition: max-height .6s; /* 顯示時的動畫 */
       text-align: center;
     }
-    /* 這是選單的設計 */
+    /* 選單設計 */
     .gMenu .menu li:first-of-type {
       padding-top: 50px;
        
@@ -154,7 +154,7 @@ body{                                                          /*全區樣式*/
     .gMenu .menu-btn {
       display: none;
     }
-    /* ▼▼▼以下是核取方塊為ON時的狀態▼▼▼ */
+    /* 核取方塊為ON時的狀態 */
     .gMenu .menu-btn:checked ~ .menu {
       max-height: 338px; /* ★核取方塊為ON時，高度顯示為338px */
       transition: max-height .6s;
@@ -162,7 +162,7 @@ body{                                                          /*全區樣式*/
     /* 隱藏選單按鈕的中間線條 */
     .gMenu .menu-btn:checked ~ .menu-icon .navicon {background: transparent;}
     
-    /* 選單按鈕的上下線條傾斜45度，製作出✕符號 */
+    /* 選單按鈕的上下線條傾斜45度(作出✕符號) */
     .gMenu .menu-btn:checked ~ .menu-icon .navicon::before {transform: rotate(-45deg);top: 0;}
     .gMenu .menu-btn:checked ~ .menu-icon .navicon::after {transform: rotate(45deg);top: 0;}
     .gMenu .menu-icon{

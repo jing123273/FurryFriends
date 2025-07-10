@@ -15,7 +15,7 @@ header h1{
 }
 .wrapper {
     display: flex;
-    justify-content: center; /* 讓內容水平置中 */
+    justify-content: center; /* 內容水平置中 */
 }
 .container {
     width: 60%;
