@@ -1,0 +1,19 @@
+{
+  "name": "furryfriends",
+  "version": "1.0.0",
+  "main": "index.js",
+
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "jest": "^30.0.4",
+    "jest-environment-jsdom": "^30.0.4"
+  }
+}
